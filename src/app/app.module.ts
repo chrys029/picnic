@@ -6,18 +6,16 @@ import { ConnexionComponent } from './components/connexion/connexion.component';
 import { AccountComponent } from './components/account/account.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AuthGuardService } from './services/auth-guard.service';
-import { AppRoutingModule} from './appRoutes';
+import { AppRoutingModule, routingComponents} from './app-routing.module';
 
 @NgModule({
   declarations: [
-    AppRoutingModule,
-    AppComponent,
-    ConnexionComponent,
-    AccountComponent,
-    NavbarComponent
+    routingComponents,
+    AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, 
+    AppRoutingModule
   ],
   providers: [
     AuthGuardService

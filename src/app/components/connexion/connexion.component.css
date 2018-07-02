@@ -1,0 +1,29 @@
+.connexionArea{
+
+    background-image: url("../../../assets/images/screen.jpg")  ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 1300px;
+    max-width: 100%;
+
+}
+
+.connexionForm{
+    padding: 500px 35% 300px 35% ;
+    text-align: center;
+    width:100%;
+}
+
+.connexionArea form{
+    width: 100%;
+    padding-left: 25%;
+    padding-right: 25%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.connexionArea form input{
+    min-width: 100%;
+}
