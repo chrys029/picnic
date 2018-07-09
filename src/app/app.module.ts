@@ -1,12 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { ConnexionComponent } from './components/connexion/connexion.component';
-import { AccountComponent } from './components/account/account.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { AuthGuardService } from './services/auth-guard.service';
 import { AppRoutingModule, routingComponents} from './app-routing.module';
+import { UserService } from './services/user.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,10 +15,14 @@ import { AppRoutingModule, routingComponents} from './app-routing.module';
   ],
   imports: [
     BrowserModule, 
+    ReactiveFormsModule,
+    HttpClientModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [
-    AuthGuardService
+    AuthGuardService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })
